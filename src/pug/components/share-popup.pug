@@ -1,0 +1,18 @@
+.share-popup
+    .container.share-popup__inner
+        ul.share-popup__social(data-html2canvas-ignore)
+            li: span(data-social="facebook"): +svg("fb")
+            li: span(data-social="vkontakte"): +svg("vk")
+            li: span(data-social="telegram"): +svg("tg")
+        .share-popup__texts
+            .share-popup__title
+                | Арстанбек 
+                | Frontend Developer
+            textarea.share-popup__textarea.share-popup__textarea--title
+                | Арстанбек 
+                | Frontend Developer
+            .share-popup__description
+                | Как разработчик, я высоко ценю способность воплотить видение дизайнера в жизнь, что считаю очень полезным для бизнеса. Я получаю огромное удовлетворение, наблюдая за работой от идеи до дизайна, особенно когда она появляется в руках пользователя. Я считаю, что ориентированные на пользователя решения являются наиболее ценными цифровыми ресурсами будущего.
+            textarea.share-popup__textarea.share-popup__textarea--description
+                | Как разработчик, я высоко ценю способность воплотить видение дизайнера в жизнь, что считаю очень полезным для бизнеса. Я получаю огромное удовлетворение, наблюдая за работой от идеи до дизайна, особенно когда она появляется в руках пользователя. Я считаю, что ориентированные на пользователя решения являются наиболее ценными цифровыми ресурсами будущего.
+        img.share-popup__img(src=`${baseDir}images/preview-man.png`)

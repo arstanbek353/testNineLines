@@ -1,0 +1,36 @@
+.skills {
+    margin-bottom: 150px;
+
+    &__main-title {
+        font-weight: 700;
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 20px;
+    }
+
+    &__title {
+        font-weight: 700;
+        margin-bottom: 6px;
+    }
+    @include devices {
+        margin-bottom: 0;
+
+        &__main-title {
+            font-size: 20px;
+            margin-bottom: 23px;
+        }
+
+        &__list {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+        &__title {
+            margin-bottom: 8px;
+        }
+    }
+}

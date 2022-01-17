@@ -1,0 +1,23 @@
+main.home
+    include ../components/share-popup
+    include ../components/main-banner
+
+    .home__exp-edu
+        .container
+            picture.home__line.home__line--top
+                source(media="(min-width:1024px)" srcset=`${baseDir}images/top-line.svg`)
+                source(media="(max-width:1024px)" srcset=`${baseDir}images/top-line-mob.svg`)
+                img(alt="decor-line")
+            picture.home__line.home__line--bot
+                source(media="(min-width:1024px)" srcset=`${baseDir}images/bot-line.svg`)
+                source(media="(max-width:1024px)" srcset=`${baseDir}images/bot-line-mob.svg`)
+                img(alt="decor-line")
+            .home__exp-edu-inner(id="resume")
+                include ../components/experience
+                .home__pic-man 
+                    picture 
+                        source(srcset=`${baseDir}images/man.png, ${baseDir}images/man@2x.png 2x`)
+                        img(src="" alt="man")
+                include ../components/education
+    
+    include ../components/skills

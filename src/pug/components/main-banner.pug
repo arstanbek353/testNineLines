@@ -1,0 +1,31 @@
+section.main-banner(id="about")
+    .container
+        .main-banner__inner
+            .main-banner__top
+                picture.main-banner__pic
+                    source(srcset=`${baseDir}images/head.png, ${baseDir}images/head@2x.png 2x`)
+                    img(src=`${baseDir}images/head.png`)
+
+            .main-banner__content 
+                .main-banner__texts
+                    h1.main-banner__title
+                        | Арстанбек
+                        br
+                        | Frontend Developer
+                    p.main-banner__description
+                        | Я талантливый специалист в фронтенд разработке с отличным опытом как в верстке, так и в JS. 
+                        | У меня есть цель - стать выдающимся разработчиком в сфере IT и применять свои навыки для решения задач компании. 
+                        | Программирование - это то что приносит мне удовольствие. Мои знания в области разработки интерфейсов могли бы помочь компании решать задачи оптимальным образом. 
+                        | Я командный человек. Мне нравится работать в команде где можно обменяться опытом. Всегда готов подстроиться под условия, обучаем, правильно воспринимаю критику, ответственен.
+
+                .main-banner__contact
+                    ul.main-banner__contact-list
+                        li: a(href="mailto:arstanbek353@gmail.com") arstanbek353@gmail.com
+                        li: a(href="tel:+996 (701) 55-01-97") +996 (701) 55-01-97
+                        li: span г. Бишкек
+                    ul.main-banner__social
+                        li: span: +svg("fb")
+                        li: span: +svg("vk")
+                        li: span: +svg("tg")
+
+                    

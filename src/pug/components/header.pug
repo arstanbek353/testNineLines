@@ -1,0 +1,19 @@
+header.header
+    .container
+        .header__inner
+            button.header__burger.btn.js-burger(type="button")
+                span
+                span
+                span
+
+            nav.header__menu
+                .header__list
+                    each object, key in data.header.menu
+                        a.header__link.js-to-anchor(
+                            href=object.url
+                            data-link=key
+                        )
+                            != object.name
+                picture.header__pic
+                    source(srcset=`${baseDir}images/menu.png, ${baseDir}images/menu@2x.png 2x` media="")
+                    img

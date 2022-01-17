@@ -1,0 +1,10 @@
+.preloader 
+    picture.preloader__pic
+        source(srcset=`${baseDir}images/rocket-man.png, ${baseDir}images/rocket-man@2x.png 2x`)
+        img(src="" alt="preloader")
+    script
+        | document.addEventListener("DOMContentLoaded", function(event) {
+        |    document.querySelector('html').classList.remove('is-lock-scroll')
+        |    
+        |    setTimeout(() => {document.querySelector('.preloader').classList.add('is-active')}, 3000)
+        | });

@@ -1,0 +1,120 @@
+.experience {
+    &__title {
+        font-weight: 700;
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+
+    &__item {
+        margin-bottom: 60px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__date {
+        color: $color-gray;
+        margin-bottom: 8px;
+    }
+
+    &__position {
+        display: flex;
+        align-items: center;
+        margin-bottom: 8px;
+    }
+
+    &__position-str {
+        font-weight: 700;
+        margin-right: 8px;
+    }
+
+    &__position-img {
+        display: flex;
+        align-items: center;
+        padding-left: 30px;
+
+        img {
+            width: 14px;
+            height: 14px;
+            object-fit: contain;
+        }
+
+        @for $i from 1 through 10 {
+            img:nth-child(#{$i}) {
+                z-index: #{10 - $i};
+                transform: translateX(-60% - $i * 50);
+            }
+        }
+    }
+
+    &__company {
+        display: flex;
+        align-items: center;
+        margin-bottom: 8px;
+
+        picture {
+            flex-shrink: 0;
+            margin-right: 8px;
+        }
+
+        img {
+            width: 30px;
+            height: 30px;
+            object-fit: contain;
+        }
+    }
+
+    &__company-name {
+        font-weight: 700;
+        margin-right: 8px;
+    }
+
+    &__text {
+        margin-bottom: 8px;
+    }
+
+    &__links {
+        a {
+            color: $color-link;
+            text-decoration-line: underline;
+            text-decoration-color: $color-link;
+        }
+    }
+
+    @include devices {
+        &__title {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        &__date {
+            margin-bottom: 10px;
+        }
+
+        &__position {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+
+        &__position-img {
+            padding-left: 16px;
+
+            img {
+                width: 17px;
+                height: 17px;
+            }
+
+            @for $i from 1 through 10 {
+                img:nth-child(#{$i}) {
+                    z-index: #{10 - $i};
+                    transform: translateX(-60% - $i * 50);
+                }
+            }
+        }
+
+        &__company-name {
+            display: block;
+        }
+    }
+}
